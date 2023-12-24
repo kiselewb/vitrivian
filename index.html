@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>Vitruvian Trade</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content wrapper">
+        <div class="logo">
+          <a href="./index.html" class="logo__link">
+            <img src="assets/images/logo.svg" alt="Logo" class="logo__image" />
+          </a>
+        </div>
+        <div class="header-options">
+          <div class="notification">
+            <span class="badge notification__badge">1</span>
+          </div>
+          <div class="authorization">
+            <a href="#" class="authorization__btn btn btn--primary"
+              >Регистрация</a
+            >
+            <a href="#" class="authorization__btn btn btn--secondary">Войти</a>
+          </div>
+          <div class="theme-switcher">
+            <label class="theme-switcher__box">
+              <input type="checkbox" class="theme-switcher__input" />
+              <span class="theme-switcher__switch"></span>
+            </label>
+          </div>
+          <div class="lang-switcher">
+            <ul class="lang-switcher__list">
+              <li class="lang-switcher__item">
+                <img
+                  src="assets/images/langs/russian.svg"
+                  alt="Russian"
+                  class="lang-switcher__image"
+                />
+                <p class="lang-switcher__text">Ru</p>
+              </li>
+            </ul>
+            <img
+              src="assets/images/icons/arrow.svg"
+              alt="Arrow Down"
+              class="lang-switcher__arrow"
+            />
+          </div>
+          <div class="support">
+            <a href="#" class="support__link">
+              <img
+                src="assets/images/icons/support.svg"
+                alt="Support"
+                class="support__icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header__menu">
+        <nav class="navigation">
+          <a href="./statistic.html" class="navigation__link">Статистика</a>
+          <a href="#" class="navigation__link">Партнерам</a>
+          <a href="#" class="navigation__link">Баланс</a>
+          <a href="#" class="navigation__link">Выплаты</a>
+        </nav>
+        <div class="header__burger">
+          <span class="header__burger-line header__burger-line--up"></span>
+          <span class="header__burger-line header__burger-line--middle"></span>
+          <span class="header__burger-line header__burger-line--down"></span>
+        </div>
+      </div>
+    </header>
+    <main class="wrapper">
+      <div class="offer">
+        <div class="offer-text">
+          <p class="offer-text__title text--gold">Зарегистрируйтесь сегодня</p>
+          <p class="offer-text__subtitle">
+            и получите до <span class="text--gold">100 USDT</span> в качестве
+            вознограждения
+          </p>
+          <img
+            src="assets/images/coin.png"
+            alt="Coin image"
+            class="offer-text__image"
+          />
+        </div>
+        <div class="offer-auth">
+          <div class="offer-auth__block">
+            <a
+              href="#"
+              class="offer-auth__btn offer-auth__btn--gift btn btn--primary"
+              >Получить подарок</a
+            >
+            <a
+              href="#"
+              class="offer-auth__btn offer-auth__btn--auth btn btn--secondary"
+              >Авторизоваться</a
+            >
+            <span class="offer-auth__text">Или</span>
+            <a
+              href="#"
+              class="offer-auth__btn offer-auth__btn--google btn btn--secondary"
+            >
+              <span
+                class="offer-auth__btn-icon offer-auth__btn-icon--google"
+              ></span>
+              Продолжить с GOOGLE
+            </a>
+            <a
+              href="#"
+              class="offer-auth__btn offer-auth__btn--apple btn btn--secondary"
+              ><span
+                class="offer-auth__btn-icon offer-auth__btn-icon--apple"
+              ></span>
+              Продолжить с APPLE</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="swiper stats-slider">
+          <div class="swiper-wrapper stats-slider-wrapper">
+            <div class="swiper-slide stats-slider-slide">
+              <div class="liders">
+                <div class="liders__title title">
+                  Лидеры по прибыли с VITRUVIAN TRADE (%)
+                </div>
+                <table class="table liders__table">
+                  <thead class="table__thead">
+                    <tr class="table__hline">
+                      <th class="table__hrow">&nbsp;</th>
+                      <th class="table__hrow">PNL за 30 дней</th>
+                      <th class="table__hrow">PNL за 30 дней</th>
+                      <th class="table__hrow">Общая доходность</th>
+                      <th class="table__hrow">Общая доходность</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table__tbody">
+                    <tr class="table__dline">
+                      <td class="table__drow liders__table-lider">
+                        <img
+                          src="assets/images/liders/person_1.png"
+                          alt="Person 1"
+                          class="table__image liders__table-image"
+                        />
+                        <span
+                          class="badge table__badge table__badge--one liders__table-badge"
+                          >1</span
+                        >
+                        <span class="table__name liders__table-name"
+                          >Evgeniy YO</span
+                        >
+                      </td>
+                      <td class="table__drow">37543,54 $</td>
+                      <td class="table__drow">110%</td>
+                      <td class="table__drow text--green">+158$</td>
+                      <td class="table__drow text--green">+15.08%</td>
+                    </tr>
+                    <tr class="table__dline">
+                      <td class="table__drow liders__table-lider">
+                        <img
+                          src="assets/images/liders/person_2.png"
+                          alt="Person 2"
+                          class="table__image liders__table-image"
+                        />
+                        <span
+                          class="badge table__badge table__badge--two liders__table-badge"
+                          >2</span
+                        >
+                        <span class="table__name liders__table-name"
+                          >Evgeniy YO</span
+                        >
+                      </td>
+                      <td class="table__drow">31543,54 $</td>
+                      <td class="table__drow">110%</td>
+                      <td class="table__drow text--green">+158$</td>
+                      <td class="table__drow text--green">+11.12%</td>
+                    </tr>
+                    <tr class="table__dline">
+                      <td class="table__drow liders__table-lider">
+                        <img
+                          src="assets/images/liders/person_3.png"
+                          alt="Person 3"
+                          class="table__image liders__table-image"
+                        />
+                        <span
+                          class="badge table__badge table__badge--three liders__table-badge"
+                          >3</span
+                        >
+                        <span class="table__name liders__table-name"
+                          >Evgeniy YO</span
+                        >
+                      </td>
+                      <td class="table__drow">27543,54 $</td>
+                      <td class="table__drow">110%</td>
+                      <td class="table__drow text--green">+158$</td>
+                      <td class="table__drow text--green">+8.12%</td>
+                    </tr>
+                    <tr class="table__dline">
+                      <td class="table__drow liders__table-lider">
+                        <img
+                          src="assets/images/liders/person_4.png"
+                          alt="Person 4"
+                          class="table__image liders__table-image"
+                        />
+                        <span
+                          class="badge table__badge table__badge--four liders__table-badge"
+                          >4</span
+                        >
+                        <span class="table__name liders__table-name"
+                          >Evgeniy YO</span
+                        >
+                      </td>
+                      <td class="table__drow">25543,54 $</td>
+                      <td class="table__drow">110%</td>
+                      <td class="table__drow text--green">+158$</td>
+                      <td class="table__drow text--green">+6.87%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="swiper-slide stats-slider-slide">
+              <div class="liders">
+                <div class="liders__title title">
+                  Лидеры по прибыли с VITRUVIAN TRADE ($)
+                </div>
+                <table class="table liders__table">
+                  <thead class="table__thead">
+                    <tr class="table__hline">
+                      <th class="table__hrow">&nbsp;</th>
+                      <th class="table__hrow">PNL за 30 дней</th>
+                      <th class="table__hrow">PNL за 30 дней</th>
+                      <th class="table__hrow">Общая доходность</th>
+                      <th class="table__hrow">Общая доходность</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table__tbody">
+                    <tr class="table__dline">
+                      <td class="table__drow liders__table-lider">
+                        <img
+                          src="assets/images/liders/person_1.png"
+                          alt="Person 1"
+                          class="table__image liders__table-image"
+                        />
+                        <span
+                          class="badge table__badge table__badge--one liders__table-badge"
+                          >1</span
+                        >
+                        <span class="table__name liders__table-name"
+                          >Evgeniy YO</span
+                        >
+                      </td>
+                      <td class="table__drow">37543,54 $</td>
+                      <td class="table__drow">110%</td>
+                      <td class="table__drow text--green">+158$</td>
+                      <td class="table__drow text--green">+15.08%</td>
+                    </tr>
+                    <tr class="table__dline">
+                      <td class="table__drow liders__table-lider">
+                        <img
+                          src="assets/images/liders/person_2.png"
+                          alt="Person 2"
+                          class="table__image liders__table-image"
+                        />
+                        <span
+                          class="badge table__badge table__badge--two liders__table-badge"
+                          >2</span
+                        >
+                        <span class="table__name liders__table-name"
+                          >Evgeniy YO</span
+                        >
+                      </td>
+                      <td class="table__drow">31543,54 $</td>
+                      <td class="table__drow">110%</td>
+                      <td class="table__drow text--green">+158$</td>
+                      <td class="table__drow text--green">+11.12%</td>
+                    </tr>
+                    <tr class="table__dline">
+                      <td class="table__drow liders__table-lider">
+                        <img
+                          src="assets/images/liders/person_3.png"
+                          alt="Person 3"
+                          class="table__image liders__table-image"
+                        />
+                        <span
+                          class="badge table__badge table__badge--three liders__table-badge"
+                          >3</span
+                        >
+                        <span class="table__name liders__table-name"
+                          >Evgeniy YO</span
+                        >
+                      </td>
+                      <td class="table__drow">27543,54 $</td>
+                      <td class="table__drow">110%</td>
+                      <td class="table__drow text--green">+158$</td>
+                      <td class="table__drow text--green">+8.12%</td>
+                    </tr>
+                    <tr class="table__dline">
+                      <td class="table__drow liders__table-lider">
+                        <img
+                          src="assets/images/liders/person_4.png"
+                          alt="Person 4"
+                          class="table__image liders__table-image"
+                        />
+                        <span
+                          class="badge table__badge table__badge--four liders__table-badge"
+                          >4</span
+                        >
+                        <span class="table__name liders__table-name"
+                          >Evgeniy YO</span
+                        >
+                      </td>
+                      <td class="table__drow">25543,54 $</td>
+                      <td class="table__drow">110%</td>
+                      <td class="table__drow text--green">+158$</td>
+                      <td class="table__drow text--green">+6.87%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination stats-slider-pagination"></div>
+        </div>
+      </div>
+      <div class="blog">
+        <div class="blog__title title">Последние статьи в блоге</div>
+        <div class="swiper blog-slider">
+          <div class="swiper-wrapper blog-slider-wrapper">
+            <div class="swiper-slide blog-slider-slide">
+              <div class="blog__item">
+                <img
+                  src="assets/images/blog_poster.png"
+                  alt="Blog poster"
+                  class="blog__item-image"
+                />
+                <p class="blog__item-title">
+                  Kick конкурент Twitch или очередная копирка!?
+                </p>
+                <a href="#" class="blog__item-link btn btn--primary">Читать</a>
+              </div>
+            </div>
+            <div class="swiper-slide blog-slider-slide">
+              <div class="blog__item">
+                <img
+                  src="assets/images/blog_poster.png"
+                  alt="Blog poster"
+                  class="blog__item-image"
+                />
+                <p class="blog__item-title">
+                  Kick конкурент Twitch или очередная копирка!?
+                </p>
+                <a href="#" class="blog__item-link btn btn--primary">Читать</a>
+              </div>
+            </div>
+            <div class="swiper-slide blog-slider-slide">
+              <div class="blog__item">
+                <img
+                  src="assets/images/blog_poster.png"
+                  alt="Blog poster"
+                  class="blog__item-image"
+                />
+                <p class="blog__item-title">
+                  Kick конкурент Twitch или очередная копирка!?
+                </p>
+                <a href="#" class="blog__item-link btn btn--primary">Читать</a>
+              </div>
+            </div>
+            <div class="swiper-slide blog-slider-slide">
+              <div class="blog__item">
+                <img
+                  src="assets/images/blog_poster.png"
+                  alt="Blog poster"
+                  class="blog__item-image"
+                />
+                <p class="blog__item-title">
+                  Kick конкурент Twitch или очередная копирка!?
+                </p>
+                <a href="#" class="blog__item-link btn btn--primary">Читать</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blog__list"></div>
+        <a href="#" class="blog__link">Читать другие статьи</a>
+      </div>
+      <div class="faq">
+        <p class="faq__title title">Часто задаваемые вопросы</p>
+        <div class="faq__list">
+          <div class="faq__item">
+            <div class="faq__question">
+              <span class="faq__badge">1</span>
+              <p class="faq__title">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <div class="faq__btn">
+                <span class="faq__btn-line faq__btn-line--horizontal"></span>
+                <span class="faq__btn-line faq__btn-line--vertical"></span>
+              </div>
+            </div>
+            <div class="faq__answer">
+              <p class="faq__text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
+                quidem sed aperiam odio adipisci a quo iusto consequuntur
+                voluptates et voluptatibus explicabo quod sapiente, dolores sunt
+                suscipit natus nulla dolorem.
+              </p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <div class="faq__question">
+              <span class="faq__badge">2</span>
+              <p class="faq__title">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                quia tempore doloribus blanditiis fugiat dolore iste recusandae
+                quaerat illum corrupti?
+              </p>
+              <div class="faq__btn">
+                <span class="faq__btn-line faq__btn-line--horizontal"></span>
+                <span class="faq__btn-line faq__btn-line--vertical"></span>
+              </div>
+            </div>
+            <div class="faq__answer">
+              <p class="faq__text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
+                quidem sed aperiam odio adipisci a quo iusto consequuntur
+                voluptates et voluptatibus explicabo quod sapiente, dolores sunt
+                suscipit natus nulla dolorem. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Reprehenderit eaque, rem
+                consequuntur consectetur dolore quaerat quisquam sed aperiam
+                eius blanditiis perspiciatis, a ipsam facilis fugiat ullam
+                maxime, quam vel dignissimos.
+              </p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <div class="faq__question">
+              <span class="faq__badge">3</span>
+              <p class="faq__title">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                quia tempore doloribus blanditiis fugiat dolore iste recusandae
+                quaerat illum corrupti?
+              </p>
+              <div class="faq__btn">
+                <span class="faq__btn-line faq__btn-line--horizontal"></span>
+                <span class="faq__btn-line faq__btn-line--vertical"></span>
+              </div>
+            </div>
+            <div class="faq__answer">
+              <p class="faq__text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
+                quidem sed aperiam odio adipisci a quo iusto consequuntur
+                voluptates et voluptatibus explicabo quod sapiente, dolores sunt
+                suscipit natus nulla dolorem. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <div class="faq__question">
+              <span class="faq__badge">4</span>
+              <p class="faq__title">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                quia tempore doloribus.
+              </p>
+              <div class="faq__btn">
+                <span class="faq__btn-line faq__btn-line--horizontal"></span>
+                <span class="faq__btn-line faq__btn-line--vertical"></span>
+              </div>
+            </div>
+            <div class="faq__answer">
+              <p class="faq__text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
+                quidem sed aperiam odio adipisci a quo iusto consequuntur
+                voluptates et voluptatibus explicabo quod sapiente, dolores sunt
+                suscipit natus nulla dolorem. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Reprehenderit eaque, rem
+                consequuntur consectetur dolore quaerat quisquam sed aperiam
+                eius blanditiis perspiciatis, a ipsam facilis fugiat ullam
+                maxime, quam vel dignissimos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner">
+        <p class="banner__title title">
+          Получите до <span class="text--gold">100 USDT</span> в качестве
+          вознаграждения
+          <span class="text--gold">за регистрацию</span>
+        </p>
+        <a href="#" class="banner__link btn btn--primary">Зарегистрироваться</a>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__copyright">
+        <a href="./index.html" class="logo__link">
+          <img src="assets/images/logo.svg" alt="Logo" class="logo__image" />
+        </a>
+        <p class="footer__copyright-text">
+          © 2021-2023 "Vitruvian Trade" - прибыльные инвестиции.
+        </p>
+        <p class="footer__copyright-text">Все права защищены.</p>
+      </div>
+      <div class="footer__menu">
+        <p class="footer__menu-title">Навигация</p>
+        <a href="./statistic.html" class="footer__menu-link">Статистика</a>
+        <a href="#" class="footer__menu-link">Партнерам</a>
+        <a href="#" class="footer__menu-link">Баланс</a>
+        <a href="#" class="footer__menu-link">Выплаты</a>
+      </div>
+      <div class="footer__menu">
+        <p class="footer__menu-title">О системе</p>
+        <a href="#" class="footer__menu-link">Пункт меню</a>
+        <a href="#" class="footer__menu-link">Пункт меню</a>
+        <a href="#" class="footer__menu-link">Пункт меню</a>
+        <a href="#" class="footer__menu-link">Пункт меню</a>
+      </div>
+      <div class="footer__menu">
+        <p class="footer__menu-title">Следите за нами в соц.сетях</p>
+        <div class="footer__contacts">
+          <a href="#" class="footer__contacts-link">
+            <img
+              src="assets/images/icons/telegram.svg"
+              alt="Telegram"
+              class="footer__contacts-image"
+            />
+          </a>
+          <a href="#" class="footer__contacts-link">
+            <img
+              src="assets/images/icons/vk.svg"
+              alt="Telegram"
+              class="footer__contacts-image"
+            />
+          </a>
+          <a href="#" class="footer__contacts-link">
+            <img
+              src="assets/images/icons/whatsapp.svg"
+              alt="Telegram"
+              class="footer__contacts-image"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
