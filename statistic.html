@@ -291,6 +291,113 @@
         </div>
       </div>
     </div>
+    <div class="barchart">
+      <p class="barchart__title">
+        Совокупный PNL, $
+        <span class="barchart__subtitle text--green">+200,54$</span>
+      </p>
+      <div class="barchart__graph">
+        <canvas id="barchart"> </canvas>
+      </div>
+    </div>
+    <div class="linechart">
+      <p class="linechart__title">
+        Совокупный PNL, %
+        <span class="barchart__subtitle text--green">+58%</span>
+      </p>
+      <div class="linechart__graph">
+        <canvas id="linechart"> </canvas>
+      </div>
+    </div>
+    <div class="doughtnut box--gray">
+      <div class="doughtnut__graph">
+        <canvas id="doughtnut"> </canvas>
+        <div class="doughtnut__graph-text">
+          <p class="doughtnut__graph-percent">+64.5%</p>
+          <p class="doughtnut__graph-currency">SOLUSDT</p>
+        </div>
+      </div>
+      <div class="doughtnut__table">
+        <div class="doughtnut__table-row">
+          <p class="doughtnut__table-hline">Пара</p>
+          <div class="doughtnut__table-line">
+            <div class="doughtnut__table-icons">
+              <img
+                src="assets/images/icons/solana.png"
+                alt="Solana"
+                class="doughtnut__table-icon"
+              />
+              <img
+                src="assets/images/icons/tether.png"
+                alt="Tether"
+                class="doughtnut__table-icon"
+              />
+            </div>
+            <p class="doughtnut__table-currency">SOLUSDT</p>
+          </div>
+          <div class="doughtnut__table-line">
+            <div class="doughtnut__table-icons">
+              <img
+                src="assets/images/icons/solana.png"
+                alt="Solana"
+                class="doughtnut__table-icon"
+              />
+              <img
+                src="assets/images/icons/tether.png"
+                alt="Tether"
+                class="doughtnut__table-icon"
+              />
+            </div>
+            <p class="doughtnut__table-currency">SOLUSDT</p>
+          </div>
+          <div class="doughtnut__table-line">
+            <div class="doughtnut__table-icons">
+              <img
+                src="assets/images/icons/solana.png"
+                alt="Solana"
+                class="doughtnut__table-icon"
+              />
+              <img
+                src="assets/images/icons/tether.png"
+                alt="Tether"
+                class="doughtnut__table-icon"
+              />
+            </div>
+            <p class="doughtnut__table-currency">SOLUSDT</p>
+          </div>
+          <div class="doughtnut__table-line">
+            <div class="doughtnut__table-icons">
+              <img
+                src="assets/images/icons/solana.png"
+                alt="Solana"
+                class="doughtnut__table-icon"
+              />
+              <img
+                src="assets/images/icons/tether.png"
+                alt="Tether"
+                class="doughtnut__table-icon"
+              />
+            </div>
+            <p class="doughtnut__table-currency">SOLUSDT</p>
+          </div>
+        </div>
+        <div class="doughtnut__table-row">
+          <p class="doughtnut__table-hline">PNL</p>
+          <div class="doughtnut__table-line">
+            <p class="doughtnut__table-text">+65.5%</p>
+          </div>
+          <div class="doughtnut__table-line">
+            <p class="doughtnut__table-text">+65.5%</p>
+          </div>
+          <div class="doughtnut__table-line">
+            <p class="doughtnut__table-text">+65.5%</p>
+          </div>
+          <div class="doughtnut__table-line">
+            <p class="doughtnut__table-text">+65.5%</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <footer class="footer">
     <div class="footer__copyright">
@@ -345,5 +452,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="scripts/index.js"></script>
 </body>
