@@ -20,6 +20,7 @@ faqItems.forEach((faqItem) => {
         } else {
             faqItems.forEach((faqItem) => {
                 faqItem.classList.remove('open')
+                const faqQuestionHeight = faqItem.children[0].clientHeight
                 faqItem.style.height = `${faqQuestionHeight}px`
             })
             faqItem.style.height = `${faqQuestionHeight + faqAnswerHeight + questionPadding}px`
