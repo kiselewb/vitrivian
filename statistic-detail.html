@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>Vitruvian Trade</title>
+  </head>
+</html>
+<body>
+  <header class="header">
+    <div class="header__content wrapper">
+      <div class="logo">
+        <a href="./index.html" class="logo__link">
+          <img src="assets/images/logo.svg" alt="Logo" class="logo__image" />
+        </a>
+      </div>
+      <div class="header-options">
+        <div class="notification">
+          <span class="badge notification__badge">1</span>
+        </div>
+        <div class="authorization">
+          <a href="#" class="authorization__btn btn btn--primary"
+            >Регистрация</a
+          >
+          <a href="#" class="authorization__btn btn btn--secondary">Войти</a>
+        </div>
+        <div class="theme-switcher">
+          <label class="theme-switcher__box">
+            <input type="checkbox" class="theme-switcher__input" checked />
+            <span class="theme-switcher__switch"></span>
+          </label>
+        </div>
+        <div class="lang-switcher">
+          <ul class="lang-switcher__list">
+            <li class="lang-switcher__item">
+              <img
+                src="assets/images/langs/russian.svg"
+                alt="Russian"
+                class="lang-switcher__image"
+              />
+              <p class="lang-switcher__text">Ru</p>
+            </li>
+          </ul>
+          <img
+            src="assets/images/icons/arrow.svg"
+            alt="Arrow Down"
+            class="lang-switcher__arrow"
+          />
+        </div>
+        <div class="support">
+          <a href="#" class="support__link">
+            <img
+              src="assets/images/icons/support.svg"
+              alt="Support"
+              class="support__icon"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header__menu">
+      <nav class="navigation">
+        <a href="./statistic.html" class="navigation__link">Статистика</a>
+        <a href="#" class="navigation__link">Партнерам</a>
+        <a href="#" class="navigation__link">Баланс</a>
+        <a href="#" class="navigation__link">Выплаты</a>
+      </nav>
+      <div class="header__burger">
+        <span class="header__burger-line header__burger-line--up"></span>
+        <span class="header__burger-line header__burger-line--middle"></span>
+        <span class="header__burger-line header__burger-line--down"></span>
+      </div>
+    </div>
+  </header>
+  <main class="wrapper">
+    <div class="statistic-detail">
+      <div class="statistic-title title">Статистика пользователя</div>
+      <div class="statistic-user box--gray">
+        <div class="statistic-user__info">
+          <img
+            src="./assets/images/liders/person_1.png"
+            alt="User photo"
+            class="statistic-user__photo user-image"
+          />
+          <div class="statistic-user__description">
+            <p class="statistic-user__description-name user-name">Yuriy JO</p>
+            <p class="statistic-user__description-id">ID 34943948309</p>
+          </div>
+        </div>
+        <div class="statistic-user__status text--green">
+          Активен
+          <span
+            class="statistic-user__status-icon status-icon status-icon--green"
+          ></span>
+        </div>
+        <a href="#" class="statistic-user__share">
+          <span class="statistic-user__share-icon"></span>
+          Поделиться
+        </a>
+        <a href="#" class="statistic-user__favorite">
+          <span class="statistic-user__favorite-icon"> </span>
+          Добавить в избранное
+        </a>
+      </div>
+      <div class="statistic-balance">
+        <div class="statistic__table statistic-balance__table">
+          <div class="statistic__table-row statistic-balance__table-row">
+            <div class="statistic__table-hline statistic-balance__table-hline">
+              Баланс
+            </div>
+            <div class="statistic__table-line statistic-balance__table-line">
+              143432 USD
+            </div>
+          </div>
+          <div class="statistic__table-row statistic-balance__table-row">
+            <div class="statistic__table-hline statistic-balance__table-hline">
+              Средства
+            </div>
+            <div class="statistic__table-line statistic-balance__table-line">
+              143432 USD
+            </div>
+          </div>
+          <div class="statistic__table-row statistic-balance__table-row">
+            <div class="statistic__table-hline statistic-balance__table-hline">
+              Нереализованый PNL
+            </div>
+            <div class="statistic__table-line statistic-balance__table-line">
+              143432 USD
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="statistic-pnl">
+        <div class="statistic__table statistic-pnl__table">
+          <div class="statistic__table-row statistic-pnl__table-row">
+            <div class="statistic__table-hline statistic-pnl__table-hline">
+              PNL за сегодня
+            </div>
+            <div
+              class="statistic__table-line statistic-pnl__table-line text--green"
+            >
+              +1.65%
+            </div>
+            <div
+              class="statistic__table-line statistic-pnl__table-line text--green"
+            >
+              +7.43 USD
+            </div>
+          </div>
+          <div class="statistic__table-row statistic-pnl__table-row">
+            <div class="statistic__table-hline statistic-pnl__table-hline">
+              PNL за 7 дней
+            </div>
+            <div
+              class="statistic__table-line statistic-pnl__table-line text--red"
+            >
+              -3.65%
+            </div>
+            <div
+              class="statistic__table-line statistic-pnl__table-line text--red"
+            >
+              -21.43 USD
+            </div>
+          </div>
+          <div class="statistic__table-row statistic-pnl__table-row">
+            <div class="statistic__table-hline statistic-pnl__table-hline">
+              PNL за 30 дней
+            </div>
+            <div
+              class="statistic__table-line statistic-pnl__table-line text--green"
+            >
+              +1.65%
+            </div>
+            <div
+              class="statistic__table-line statistic-pnl__table-line text--green"
+            >
+              +7.43 USD
+            </div>
+          </div>
+          <div class="statistic__table-row statistic-pnl__table-row">
+            <div class="statistic__table-hline statistic-pnl__table-hline">
+              PNL за все время
+            </div>
+            <div
+              class="statistic__table-line statistic-pnl__table-line text--red"
+            >
+              -3.65%
+            </div>
+            <div
+              class="statistic__table-line statistic-pnl__table-line text--red"
+            >
+              -21.43 USD
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="statistic-deal">
+        <div class="statistic__table statistic-deal__table box--gray">
+          <div class="statistic__table-row statistic-deal__table-row">
+            <div
+              class="statistic__table-hline statistic-deal__table-hline statistic-deal__table-hline--title"
+            >
+              DOTUSDT
+            </div>
+          </div>
+          <div class="statistic__table-row statistic-deal__table-row">
+            <div class="statistic__table-hline statistic-deal__table-hline">
+              Цена входа
+            </div>
+            <div class="statistic__table-line statistic-deal__table-line">
+              338$
+            </div>
+          </div>
+          <div class="statistic__table-row statistic-deal__table-row">
+            <div class="statistic__table-hline statistic-deal__table-hline">
+              Объем позы
+            </div>
+            <div class="statistic__table-line statistic-deal__table-line">
+              338$
+            </div>
+          </div>
+          <div class="statistic__table-row statistic-deal__table-row">
+            <div class="statistic__table-hline statistic-deal__table-hline">
+              Объем лотов
+            </div>
+            <div class="statistic__table-line statistic-deal__table-line">
+              338$
+            </div>
+          </div>
+          <div class="statistic__table-row statistic-deal__table-row">
+            <div class="statistic__table-hline statistic-deal__table-hline">
+              PNL(USDT)
+            </div>
+            <div class="statistic__table-line statistic-deal__table-line">
+              338$
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accounts">
+      <div class="accounts-title title">Статистика счета</div>
+      <div class="accounts-period box--gray">
+        <span class="accounts-period__date active">7 дн.</span>
+        <span class="accounts-period__date">1 мес.</span>
+        <span class="accounts-period__date">3 мес.</span>
+        <span class="accounts-period__date">Все время</span>
+      </div>
+      <div class="accounts-filter">
+        <span class="accounts-filter__item active">Статистика</span>
+        <span class="accounts-filter__item">История</span>
+        <span class="accounts-filter__item">Ввод и вывод</span>
+      </div>
+      <div class="accounts-history">
+        <div class="accounts-history__item">
+          <div class="accounts-history__info">
+            <p class="accounts-history__currency">USDT</p>
+            <p class="accounts-history__status text--green">Куплено</p>
+          </div>
+          <div class="accounts-history__description">
+            <p class="accounts-history__id">212211091</p>
+            <p class="accounts-history__date">2023-08-12 09:33:02</p>
+          </div>
+          <div class="accounts-history__action">
+            <img
+              src="assets/images/icons/big-arrow.svg"
+              alt="Arrow right"
+              class="accounts-history__arrow"
+            />
+          </div>
+        </div>
+        <div class="accounts-history__item">
+          <div class="accounts-history__info">
+            <p class="accounts-history__currency">USDT</p>
+            <p class="accounts-history__status text--red">Продано</p>
+          </div>
+          <div class="accounts-history__description">
+            <p class="accounts-history__id">212211091</p>
+            <p class="accounts-history__date">2023-08-12 09:33:02</p>
+          </div>
+          <div class="accounts-history__action">
+            <img
+              src="assets/images/icons/big-arrow.svg"
+              alt="Arrow right"
+              class="accounts-history__arrow"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="barchart">
+      <p class="barchart__title">
+        Совокупный PNL, $
+        <span class="barchart__subtitle text--green">+200,54$</span>
+      </p>
+      <div class="barchart__graph">
+        <canvas id="barchart"> </canvas>
+      </div>
+    </div>
+    <div class="linechart">
+      <p class="linechart__title">
+        Совокупный PNL, %
+        <span class="barchart__subtitle text--green">+58%</span>
+      </p>
+      <div class="linechart__graph">
+        <canvas id="linechart"> </canvas>
+      </div>
+    </div>
+    <div class="doughtnut box--gray">
+      <div class="doughtnut__graph">
+        <canvas id="doughtnut"> </canvas>
+        <div class="doughtnut__graph-text">
+          <p class="doughtnut__graph-percent">+64.5%</p>
+          <p class="doughtnut__graph-currency">SOLUSDT</p>
+        </div>
+      </div>
+      <div class="doughtnut__table">
+        <div class="doughtnut__table-row">
+          <p class="doughtnut__table-hline">Пара</p>
+          <div class="doughtnut__table-line">
+            <div class="doughtnut__table-icons">
+              <img
+                src="assets/images/icons/solana.png"
+                alt="Solana"
+                class="doughtnut__table-icon"
+              />
+              <img
+                src="assets/images/icons/tether.png"
+                alt="Tether"
+                class="doughtnut__table-icon"
+              />
+            </div>
+            <p class="doughtnut__table-currency">SOLUSDT</p>
+          </div>
+          <div class="doughtnut__table-line">
+            <div class="doughtnut__table-icons">
+              <img
+                src="assets/images/icons/solana.png"
+                alt="Solana"
+                class="doughtnut__table-icon"
+              />
+              <img
+                src="assets/images/icons/tether.png"
+                alt="Tether"
+                class="doughtnut__table-icon"
+              />
+            </div>
+            <p class="doughtnut__table-currency">SOLUSDT</p>
+          </div>
+          <div class="doughtnut__table-line">
+            <div class="doughtnut__table-icons">
+              <img
+                src="assets/images/icons/solana.png"
+                alt="Solana"
+                class="doughtnut__table-icon"
+              />
+              <img
+                src="assets/images/icons/tether.png"
+                alt="Tether"
+                class="doughtnut__table-icon"
+              />
+            </div>
+            <p class="doughtnut__table-currency">SOLUSDT</p>
+          </div>
+          <div class="doughtnut__table-line">
+            <div class="doughtnut__table-icons">
+              <img
+                src="assets/images/icons/solana.png"
+                alt="Solana"
+                class="doughtnut__table-icon"
+              />
+              <img
+                src="assets/images/icons/tether.png"
+                alt="Tether"
+                class="doughtnut__table-icon"
+              />
+            </div>
+            <p class="doughtnut__table-currency">SOLUSDT</p>
+          </div>
+        </div>
+        <div class="doughtnut__table-row">
+          <p class="doughtnut__table-hline">PNL</p>
+          <div class="doughtnut__table-line">
+            <p class="doughtnut__table-text">+65.5%</p>
+          </div>
+          <div class="doughtnut__table-line">
+            <p class="doughtnut__table-text">+65.5%</p>
+          </div>
+          <div class="doughtnut__table-line">
+            <p class="doughtnut__table-text">+65.5%</p>
+          </div>
+          <div class="doughtnut__table-line">
+            <p class="doughtnut__table-text">+65.5%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__copyright">
+      <a href="./index.html" class="logo__link">
+        <img src="assets/images/logo.svg" alt="Logo" class="logo__image" />
+      </a>
+      <p class="footer__copyright-text">
+        © 2021-2023 "Vitruvian Trade" - прибыльные инвестиции.
+      </p>
+      <p class="footer__copyright-text">Все права защищены.</p>
+    </div>
+    <div class="footer__menu">
+      <p class="footer__menu-title">
+        Навигация
+        <img
+          src="./assets/images/icons/arrow.svg"
+          alt="Arrow"
+          class="footer__menu-title-arrow"
+        />
+      </p>
+      <div class="footer__submenu">
+        <a href="./statistic.html" class="footer__menu-link">Статистика</a>
+        <a href="#" class="footer__menu-link">Партнерам</a>
+        <a href="#" class="footer__menu-link">Баланс</a>
+        <a href="#" class="footer__menu-link">Выплаты</a>
+      </div>
+    </div>
+    <div class="footer__menu">
+      <p class="footer__menu-title">
+        О системе
+        <img
+          src="./assets/images/icons/arrow.svg"
+          alt="Arrow"
+          class="footer__menu-title-arrow"
+        />
+      </p>
+      <div class="footer__submenu">
+        <a href="./statistic.html" class="footer__menu-link">О системе</a>
+        <a href="#" class="footer__menu-link">О системе</a>
+        <a href="#" class="footer__menu-link">О системе</a>
+        <a href="#" class="footer__menu-link">О системе</a>
+        <a href="#" class="footer__menu-link">О системе</a>
+        <a href="#" class="footer__menu-link">О системе</a>
+      </div>
+    </div>
+    <div class="footer__menu">
+      <p class="footer__menu-title">Следите за нами в соц.сетях</p>
+      <div class="footer__contacts">
+        <a href="#" class="footer__contacts-link">
+          <img
+            src="assets/images/icons/telegram.svg"
+            alt="Telegram"
+            class="footer__contacts-image"
+          />
+        </a>
+        <a href="#" class="footer__contacts-link">
+          <img
+            src="assets/images/icons/vk.svg"
+            alt="Telegram"
+            class="footer__contacts-image"
+          />
+        </a>
+        <a href="#" class="footer__contacts-link">
+          <img
+            src="assets/images/icons/whatsapp.svg"
+            alt="Telegram"
+            class="footer__contacts-image"
+          />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
