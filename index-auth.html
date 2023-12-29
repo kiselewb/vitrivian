@@ -19,10 +19,113 @@
           </a>
         </div>
         <div class="header-options">
-          <!-- <div class="notification">
+          <div class="header-user">
+            <img
+              src="./assets/images/liders/person_1.png"
+              alt="User Photo"
+              class="header-user__image user-image"
+            />
+            <div class="header-user__info">
+              <p class="header-user__name user-name">Robert Pikols</p>
+              <p class="header-user__id">ID 293394392404</p>
+            </div>
+            <div class="header-user__account">
+              <div class="accounts-switcher switcher">
+                <div class="accounts-switcher__list switcher-list">
+                  <div
+                    class="accounts-switcher__item accounts-switcher__item--selected switcher__item switcher__item--selected"
+                  >
+                    <img
+                      src="assets/images/icons/tether.png"
+                      alt="Tether"
+                      class="accounts-switcher__image switcher__image"
+                    />
+                    <p class="accounts-switcher__text switcher__text">
+                      14 548.03
+                    </p>
+                  </div>
+                </div>
+                <img
+                  src="assets/images/icons/arrow.svg"
+                  alt="Arrow Down"
+                  class="accounts-switcher__arrow switcher__arrow"
+                />
+                <div class="accounts-switcher__sublist switcher__sublist">
+                  <div
+                    class="accounts-switcher__item accounts-switcher__subitem switcher__item switcher__subitem"
+                    data-value="14 548.03"
+                  >
+                    <img
+                      src="assets/images/icons/tether.png"
+                      alt="Tether"
+                      class="accounts-switcher__image switcher__image"
+                    />
+                    <p class="accounts-switcher__text switcher__text">
+                      14 548.03
+                    </p>
+                    <img
+                      src="./assets/images/icons/checkmark.png"
+                      alt="Checkmark"
+                      class="accounts-switcher__checkmark switcher__checkmark"
+                    />
+                  </div>
+                  <div
+                    class="accounts-switcher__item accounts-switcher__subitem switcher__item switcher__subitem"
+                    data-value="0.58900"
+                  >
+                    <img
+                      src="assets/images/icons/bitcoin.svg"
+                      alt="Russian"
+                      class="accounts-switcher__image switcher__image"
+                    />
+                    <p class="accounts-switcher__text switcher__text">
+                      0.58900
+                    </p>
+                    <img
+                      src="./assets/images/icons/checkmark.png"
+                      alt="Checkmark"
+                      class="accounts-switcher__checkmark switcher__checkmark"
+                    />
+                  </div>
+                  <div
+                    class="accounts-switcher__item accounts-switcher__subitem switcher__item switcher__subitem"
+                    data-value="2 390.05"
+                  >
+                    <img
+                      src="assets/images/icons/solana.png"
+                      alt="Russian"
+                      class="accounts-switcher__image switcher__image"
+                    />
+                    <p class="accounts-switcher__text switcher__text">
+                      2 390.05
+                    </p>
+                    <img
+                      src="./assets/images/icons/checkmark.png"
+                      alt="Checkmark"
+                      class="accounts-switcher__checkmark switcher__checkmark"
+                    />
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="header-user__link btn btn--primary"
+                >Пополнить</a
+              >
+            </div>
+          </div>
+          <div class="notification">
             <span class="badge notification__badge">1</span>
-          </div> -->
-          <div class="authorization">
+          </div>
+          <div class="settings">
+            <a href="#" class="settings__link">
+              <img src="./assets/images/icons/settings.svg" alt="Settings" />
+            </a>
+          </div>
+          <div class="exit">
+            <a href="./index.html" class="exit__link">
+              <img src="./assets/images/icons/exit.svg" alt="Settings" />
+            </a>
+          </div>
+          <!-- <div class="authorization">
             <a href="#" class="authorization__btn btn btn--primary"
               >Регистрация</a
             >
@@ -31,7 +134,7 @@
               class="authorization__btn btn btn--secondary"
               >Войти</a
             >
-          </div>
+          </div> -->
           <div class="theme-switcher">
             <label class="theme-switcher__box">
               <input type="checkbox" class="theme-switcher__input" checked />
@@ -132,21 +235,22 @@
         </div>
       </div>
     </header>
-    <main class="wrapper">
+    <main class="wrapper main-auth">
       <div class="offer">
         <div class="offer-text">
-          <p class="offer-text__title text--gold">Зарегистрируйтесь сегодня</p>
+          <p class="offer-text__title text--gold">Пополните баланс сегодня</p>
           <p class="offer-text__subtitle">
             и получите до <span class="text--gold">100 USDT</span> в качестве
             вознограждения
           </p>
-          <img
-            src="assets/images/coin.png"
-            alt="Coin image"
-            class="offer-text__image"
-          />
+          <a href="#" class="offer-text__link btn btn--primary">Пополнить</a>
         </div>
-        <div class="offer-auth">
+        <img
+          src="assets/images/coin.png"
+          alt="Coin image"
+          class="offer-text__image"
+        />
+        <!-- <div class="offer-auth">
           <div class="offer-auth__block">
             <a
               href="#"
@@ -177,7 +281,7 @@
               Продолжить с APPLE</a
             >
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="stats">
         <div class="swiper stats-slider">
@@ -526,14 +630,14 @@
           </div>
         </div>
       </div>
-      <div class="banner">
+      <!-- <div class="banner">
         <p class="banner__title title">
           Получите до <span class="text--gold">100 USDT</span> в качестве
           вознаграждения
           <span class="text--gold">за регистрацию</span>
         </p>
         <a href="#" class="banner__link btn btn--primary">Зарегистрироваться</a>
-      </div>
+      </div> -->
     </main>
     <footer class="footer">
       <div class="footer__copyright">
@@ -609,5 +713,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/accountSwitcher.js"></script>
   </body>
 </html>
