@@ -19,9 +19,9 @@
           </a>
         </div>
         <div class="header-options">
-          <div class="notification">
-            <span class="badge notification__badge">1</span>
-          </div>
+          <!-- <div class="notification">
+              <span class="badge notification__badge">1</span>
+            </div> -->
           <div class="authorization">
             <a href="#" class="authorization__btn btn btn--primary"
               >Регистрация</a
@@ -35,21 +35,71 @@
             </label>
           </div>
           <div class="lang-switcher">
-            <ul class="lang-switcher__list">
-              <li class="lang-switcher__item">
+            <div class="lang-switcher__list">
+              <div class="lang-switcher__item lang-switcher__item--selected">
                 <img
                   src="assets/images/langs/russian.svg"
                   alt="Russian"
                   class="lang-switcher__image"
                 />
                 <p class="lang-switcher__text">Ru</p>
-              </li>
-            </ul>
+              </div>
+            </div>
             <img
               src="assets/images/icons/arrow.svg"
               alt="Arrow Down"
               class="lang-switcher__arrow"
             />
+            <div class="lang-switcher__sublist">
+              <div
+                class="lang-switcher__item lang-switcher__subitem"
+                data-lang="Ru"
+              >
+                <img
+                  src="assets/images/langs/russian.svg"
+                  alt="Russian"
+                  class="lang-switcher__image"
+                />
+                <p class="lang-switcher__text">Ru</p>
+                <img
+                  src="./assets/images/icons/checkmark.png"
+                  alt="Checkmark"
+                  class="lang-switcher__checkmark"
+                />
+              </div>
+              <div
+                class="lang-switcher__item lang-switcher__subitem"
+                data-lang="En"
+              >
+                <img
+                  src="assets/images/langs/english.svg"
+                  alt="Russian"
+                  class="lang-switcher__image"
+                />
+                <p class="lang-switcher__text">En</p>
+                <img
+                  src="./assets/images/icons/checkmark.png"
+                  alt="Checkmark"
+                  class="lang-switcher__checkmark"
+                />
+              </div>
+              <div
+                class="lang-switcher__item lang-switcher__subitem"
+                data-lang="Cn"
+              >
+                <img
+                  src="assets/images/langs/chinese.svg"
+                  alt="Russian"
+                  class="lang-switcher__image"
+                />
+                <p class="lang-switcher__text">Cn</p>
+                <img
+                  src="./assets/images/icons/checkmark.png"
+                  alt="Checkmark"
+                  class="lang-switcher__checkmark"
+                />
+              </div>
+            </div>
           </div>
           <div class="support">
             <a href="#" class="support__link">
@@ -79,8 +129,8 @@
 
     <main class="wrapper">
       <div class="statistic">
-        <div class="statistic__title title">Статистика</div>
         <div class="statistic-main">
+          <p class="statistic__title title">Статистика</p>
           <div class="statistic__table statistic-main__table">
             <div class="statistic__table-row statistic-main__table-row">
               <div class="statistic__table-hline statistic-main__table-hline">
@@ -314,6 +364,69 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="statistic-tariffs">
+          <div class="statistic-tariffs__title">
+            Мы рады предложить вам прогрессивную тарифную сетку
+          </div>
+          <div class="statistic-tariffs__subtitle">
+            Тарифная сетка адаптируется к вашим потребностям и объему средств на
+            торговом счете. Чем больше средств вы инвестируете, тем меньше
+            процент с дохода мы взимаем, что позволяет вам получать больше
+            прибыли
+          </div>
+          <div class="statistic-tariffs__block">
+            <div class="swiper statistic-tariffs__slider">
+              <div class="swiper-wrapper statistic-tariffs__list">
+                <div
+                  class="swiper-slide statistic-tariffs__item statistic-tariffs__item--bronze box--bronze"
+                >
+                  <p class="statistic-tariffs__name">Бронзовый</p>
+                  <p class="statistic-tariffs__description">Комиссия: 5%</p>
+                  <p class="statistic-tariffs__value">1000$</p>
+                </div>
+                <div
+                  class="swiper-slide statistic-tariffs__item statistic-tariffs__item--silver box--silver"
+                >
+                  <p class="statistic-tariffs__name">Серебрянный</p>
+                  <p class="statistic-tariffs__description">Комиссия: 5%</p>
+                  <p class="statistic-tariffs__value">2000$</p>
+                </div>
+                <div
+                  class="swiper-slide statistic-tariffs__item statistic-tariffs__item--gold box--gold"
+                >
+                  <p class="statistic-tariffs__name">Золотой</p>
+                  <p class="statistic-tariffs__description">Комиссия: 5%</p>
+                  <p class="statistic-tariffs__value">3000$</p>
+                </div>
+                <div
+                  class="swiper-slide statistic-tariffs__item statistic-tariffs__item--platinum box--platinum"
+                >
+                  <p class="statistic-tariffs__name">Платиновый</p>
+                  <p class="statistic-tariffs__description">Комиссия: 5%</p>
+                  <p class="statistic-tariffs__value">4000$</p>
+                </div>
+                <div
+                  class="swiper-slide statistic-tariffs__item statistic-tariffs__item--diamond box--diamond"
+                >
+                  <p class="statistic-tariffs__name">Бриллиантовый</p>
+                  <p class="statistic-tariffs__description">Комиссия: 5%</p>
+                  <p class="statistic-tariffs__value">5000$</p>
+                </div>
+              </div>
+              <div class="statistic-tariffs__line">
+                <div class="statistic-tariffs__activeline">
+                  <span class="statistic-tariffs__line-title"
+                    >Cумма инвестиций</span
+                  >
+                  <span class="statistic-tariffs__line-value">1728 $</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="statistic-tariffs__btn btn btn--primary"
+            >Подключить новый счет</a
+          >
         </div>
       </div>
     </main>

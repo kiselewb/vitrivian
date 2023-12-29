@@ -20,9 +20,9 @@
         </a>
       </div>
       <div class="header-options">
-        <div class="notification">
+        <!-- <div class="notification">
           <span class="badge notification__badge">1</span>
-        </div>
+        </div> -->
         <div class="authorization">
           <a href="#" class="authorization__btn btn btn--primary"
             >Регистрация</a
@@ -36,21 +36,71 @@
           </label>
         </div>
         <div class="lang-switcher">
-          <ul class="lang-switcher__list">
-            <li class="lang-switcher__item">
+          <div class="lang-switcher__list">
+            <div class="lang-switcher__item lang-switcher__item--selected">
               <img
                 src="assets/images/langs/russian.svg"
                 alt="Russian"
                 class="lang-switcher__image"
               />
               <p class="lang-switcher__text">Ru</p>
-            </li>
-          </ul>
+            </div>
+          </div>
           <img
             src="assets/images/icons/arrow.svg"
             alt="Arrow Down"
             class="lang-switcher__arrow"
           />
+          <div class="lang-switcher__sublist">
+            <div
+              class="lang-switcher__item lang-switcher__subitem"
+              data-lang="Ru"
+            >
+              <img
+                src="assets/images/langs/russian.svg"
+                alt="Russian"
+                class="lang-switcher__image"
+              />
+              <p class="lang-switcher__text">Ru</p>
+              <img
+                src="./assets/images/icons/checkmark.png"
+                alt="Checkmark"
+                class="lang-switcher__checkmark"
+              />
+            </div>
+            <div
+              class="lang-switcher__item lang-switcher__subitem"
+              data-lang="En"
+            >
+              <img
+                src="assets/images/langs/english.svg"
+                alt="Russian"
+                class="lang-switcher__image"
+              />
+              <p class="lang-switcher__text">En</p>
+              <img
+                src="./assets/images/icons/checkmark.png"
+                alt="Checkmark"
+                class="lang-switcher__checkmark"
+              />
+            </div>
+            <div
+              class="lang-switcher__item lang-switcher__subitem"
+              data-lang="Cn"
+            >
+              <img
+                src="assets/images/langs/chinese.svg"
+                alt="Russian"
+                class="lang-switcher__image"
+              />
+              <p class="lang-switcher__text">Cn</p>
+              <img
+                src="./assets/images/icons/checkmark.png"
+                alt="Checkmark"
+                class="lang-switcher__checkmark"
+              />
+            </div>
+          </div>
         </div>
         <div class="support">
           <a href="#" class="support__link">

@@ -32,6 +32,8 @@ faqItems.forEach((faqItem) => {
 // LANG SWITCHER
 const langSwitcher = document.querySelector('.lang-switcher')
 const langSwitcherArrow = document.querySelector('.lang-switcher__arrow')
+const langSwitcherSubItems = document.querySelectorAll('.lang-switcher__subitem')
+const langSwitcherItemSelected = document.querySelector('.lang-switcher__item--selected')
 
 langSwitcher.addEventListener('click', (event) => {
     langSwitcher.classList.toggle('active')
@@ -43,6 +45,18 @@ langSwitcher.addEventListener('click', (event) => {
     } else {
         langSwitcherArrow.style.transform = 'rotate(90deg)'
     }
+
+    langSwitcherSubItems.forEach((subItem) => {
+        subItem.addEventListener('click', (event) => {
+            let currentSelectedImageSrc = langSwitcherItemSelected.children[0]
+            let currentSelectedText = langSwitcherItemSelected.children[1]
+            const newSelectedImageSrc = subItem.querySelector('img').src
+            const newSelectedText = subItem.dataset.lang
+
+            currentSelectedImageSrc.src = newSelectedImageSrc
+            currentSelectedText.textContent = newSelectedText
+        })
+    })
 })
 
 // FOOTER SUBMENU SPOILER
@@ -134,6 +148,37 @@ const statisticAccountSlider = new Swiper('.statistic-account__slider', {
             slidesPerView: 1.3,
             spaceBetween: 10,
         },
+    }
+});
+
+// STATISTIC TARIFFS SLIDER
+const statisticTariffsSlider = new Swiper('.statistic-tariffs__slider', {
+    direction: 'horizontal',
+    loop: false,
+    slidesPerView: 1.5,
+    spaceBetween: 10,
+
+    breakpoints: {
+        820: {
+            loop: false,
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+        },
+        640: {
+            loop: false,
+            slidesPerView: 3.5,
+            spaceBetween: 40,
+        },
+        460: {
+            loop: false,
+            slidesPerView: 2.5,
+            spaceBetween: 40,
+        },
+        420: {
+            loop: false,
+            slidesPerView: 2.5,
+            spaceBetween: 20,
+        }
     }
 });
 
