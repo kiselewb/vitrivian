@@ -3,6 +3,17 @@ const accountSwitcher = document.querySelector('.accounts-switcher')
 const accountSwitcherArrow = document.querySelector('.accounts-switcher__arrow')
 const accountSwitcherSubItems = document.querySelectorAll('.accounts-switcher__subitem')
 const accountSwitcherItemSelected = document.querySelector('.accounts-switcher__item--selected')
+const currentSelectedAccountValue = accountSwitcherItemSelected.children[1].textContent.trim()
+
+const selectCurrentAccount = () => {
+    accountSwitcherSubItems.forEach((subItem) => {
+        accountValue = subItem.dataset.value
+        if (accountValue === currentSelectedAccountValue) {
+            subItem.children[2].style.opacity = '1'
+        }
+    })
+}
+selectCurrentAccount()
 
 accountSwitcher.addEventListener('click', (event) => {
     accountSwitcher.classList.toggle('active')
@@ -24,6 +35,9 @@ accountSwitcher.addEventListener('click', (event) => {
 
             currentSelectedImageSrc.src = newSelectedImageSrc
             currentSelectedText.textContent = newSelectedText
+
+            accountSwitcherSubItems.forEach(subItem => subItem.children[2].style.opacity = '0')
+            subItem.children[2].style.opacity = '1'
         })
     })
 })

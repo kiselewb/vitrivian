@@ -14,6 +14,7 @@
 body {
   background-color: #191a1f;
   color: #ffffff;
+  position: relative;
 }
 .wrapper {
   max-width: 1240px;
@@ -388,7 +389,7 @@ body {
   transform: translateY(10px);
   transform-origin: center;
 }
-.header__burger.open .header__burger-line--up {
+/* .header__burger.open .header__burger-line--up {
   transform: translateY(9px) rotate(45deg);
 }
 .header__burger.open .header__burger-line--middle {
@@ -396,7 +397,7 @@ body {
 }
 .header__burger.open .header__burger-line--down {
   transform: translateY(1px) rotate(-45deg);
-}
+} */
 
 /* OFFER */
 .offer {
@@ -755,6 +756,45 @@ body {
 .footer__menu-link:hover,
 .footer__contacts-link:hover {
   opacity: 0.7;
+}
+
+/* MOBMENU */
+.mobmenu {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 3.5rem 0 2.5rem 1rem;
+  box-sizing: border-box;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  position: absolute;
+  left: 0;
+  background-color: #000000;
+  z-index: 2;
+}
+.mobmenu__close {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url("../assets/images/icons/close.svg") no-repeat left top / 30px;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  cursor: pointer;
+}
+.mobmenu__item {
+}
+.mobmenu__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.mobmenu__link:hover {
+  opacity: 0.5;
+}
+.mobmenu__image {
+  width: 18px;
 }
 
 /* STATISTIC-DETAIL PAGE - SPECIFICATION */
@@ -1460,21 +1500,8 @@ body {
     justify-content: center;
     order: 0;
   }
-  .header__burger {
-    display: block;
-  }
   .navigation {
-    position: absolute;
-    top: 54px;
-    left: -100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    padding: 2rem 0;
-    background-color: #25282f;
-    z-index: 2;
-    border-top: 1px solid #ffffff;
+    gap: 40px;
   }
   .footer {
     flex-wrap: wrap;
@@ -1646,6 +1673,16 @@ body {
   }
   .authorization {
     gap: 10px;
+  }
+  .header__burger {
+    display: block;
+  }
+  .settings,
+  .exit {
+    display: none;
+  }
+  .navigation {
+    display: none;
   }
   .offer {
     text-align: center;

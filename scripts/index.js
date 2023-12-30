@@ -1,3 +1,5 @@
+const body = document.querySelector('body')
+
 // FAQ SPOLER
 const faqItems = document.querySelectorAll('.faq__item')
 const faqAnswer = document.querySelector('.faq__answer')
@@ -34,6 +36,17 @@ const langSwitcher = document.querySelector('.lang-switcher')
 const langSwitcherArrow = document.querySelector('.lang-switcher__arrow')
 const langSwitcherSubItems = document.querySelectorAll('.lang-switcher__subitem')
 const langSwitcherItemSelected = document.querySelector('.lang-switcher__item--selected')
+const currentSelectedLangValue = langSwitcherItemSelected.children[1].textContent
+
+const selectCurrentLang = () => {
+    langSwitcherSubItems.forEach((subItem) => {
+        langValue = subItem.dataset.lang
+        if (langValue === currentSelectedLangValue) {
+            subItem.children[2].style.opacity = '1'
+        }
+    })
+}
+selectCurrentLang()
 
 langSwitcher.addEventListener('click', (event) => {
     langSwitcher.classList.toggle('active')
@@ -55,6 +68,9 @@ langSwitcher.addEventListener('click', (event) => {
 
             currentSelectedImageSrc.src = newSelectedImageSrc
             currentSelectedText.textContent = newSelectedText
+
+            langSwitcherSubItems.forEach(subItem => subItem.children[2].style.opacity = '0')
+            subItem.children[2].style.opacity = '1'
         })
     })
 })
@@ -182,20 +198,39 @@ const statisticTariffsSlider = new Swiper('.statistic-tariffs__slider', {
     }
 });
 
-// BURGER MENU
-const burgerMenu = document.querySelector('.header__burger')
-const navigation = document.querySelector('.navigation')
-const headerMenu = burgerMenu.closest('.header__menu')
+// MOBILE MENU
+const burgerButton = document.querySelector('.header__burger')
+const mobileMenu = document.querySelector('.mobmenu')
+const mobileMenuCloseBtn = document.querySelector('.mobmenu__close')
+const headerSection = document.querySelector('header')
+const mainSection = document.querySelector('main')
+const clientWindowHeight = window.screen.height
+const mobileMenuHeight = mobileMenu.clientHeight
 
-burgerMenu.addEventListener('click', (event) => {
-    burgerMenu.classList.toggle('open')
+mobileMenu.style.top = `${clientWindowHeight}px`
 
-    isOpened = burgerMenu.classList.contains('open')
-    if (isOpened) {
-        navigation.style.left = '0'
-    } else {
-        navigation.style.left = '-100%'
-    }
+burgerButton.addEventListener('click', (event) => {
+    mobileMenu.style.display = 'flex'
+
+    const clientWindowHeight = window.screen.height
+    const mobileMenuHeight = mobileMenu.clientHeight
+
+    mobileMenu.style.top = `${clientWindowHeight - mobileMenuHeight}px`
+
+    body.style.overflow = 'hidden'
+    headerSection.style.filter = 'blur(10px)'
+    mainSection.style.filter = 'blur(10px)'
+
+    mobileMenuCloseBtn.addEventListener('click', () => {
+        mobileMenu.style.top = `${clientWindowHeight}px`
+        setTimeout(() => {
+            mobileMenu.style.display = 'none'
+        }, 400)
+        body.style.overflow = 'auto'
+        headerSection.style.filter = 'none'
+        mainSection.style.filter = 'none'
+    })
+    // }
 })
 
 // ACCOUNT PERIOD SWITCH
@@ -224,178 +259,4 @@ filterItems.forEach((filterItem) => {
         filterItem.classList.add('active')
     })
 
-})
-
-// BARCHART
-const barchartCtx = document.getElementById('barchart');
-
-const barchartData = [
-    { date: '03.03', value: 60 },
-    { date: '03.03', value: 120 },
-    { date: '03.03', value: 90 },
-    { date: '03.03', value: -80 },
-    { date: '03.03', value: 270 },
-    { date: '03.03', value: 50 },
-    { date: '03.03', value: 70 },
-]
-
-const getDataBackgroundColors = (data) => {
-    backgroundColors = []
-    data.forEach((data) => {
-        if (data.value > 0) {
-            backgroundColors.push('#00FF85')
-        } else {
-            backgroundColors.push('#FF4646')
-        }
-    })
-
-    return backgroundColors
-}
-
-const handleResize = (barchart) => {
-    barchart.resize();
-}
-
-new Chart(barchartCtx, {
-    type: 'bar',
-    data: {
-        labels: barchartData.map(dataX => dataX.date),
-        datasets: [{
-            data: barchartData.map(dataY => dataY.value),
-            backgroundColor: getDataBackgroundColors(barchartData),
-            borderRadius: 5,
-            barPercentage: 0.3,
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        onResize: handleResize,
-        plugins: {
-            legend: {
-                display: false
-            }
-        },
-        scales: {
-            x: {
-                grid: {
-                    display: false,
-                    drawTicks: false,
-                    drawOnChartArea: false
-                },
-            },
-            y: {
-                type: 'linear',
-                min: -100,
-                max: 300,
-                position: 'left',
-                grid: {
-                    color: '#676767',
-                    drawTicks: false,
-                }
-            }
-        },
-        layout: {
-            padding: 0
-        }
-    }
-});
-
-// LINECHART
-const linechartCtx = document.getElementById('linechart');
-
-const linechartData = [
-    { date: '03.03', value: -40 },
-    { date: '03.03', value: 40 },
-    { date: '03.03', value: 120 },
-    { date: '03.03', value: 50 },
-    { date: '03.03', value: 180 },
-    { date: '03.03', value: 30 },
-    { date: '03.03', value: 230 },
-]
-
-const handleResizeLine = (linechart) => {
-    linechart.resize();
-}
-
-new Chart(linechartCtx, {
-    type: 'line',
-    data: {
-        labels: linechartData.map(dataX => dataX.date),
-        datasets: [{
-            data: linechartData.map(dataY => dataY.value),
-            backgroundColor: '#C1A875',
-            borderColor: '#C1A875',
-            pointRadius: 5,
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        onResize: handleResizeLine,
-        plugins: {
-            legend: {
-                display: false,
-            },
-            title: {
-                display: false,
-            },
-        },
-        scales: {
-            x: {
-                grid: {
-                    display: false,
-                    drawTicks: false,
-                    drawOnChartArea: false,
-                },
-            },
-            y: {
-                type: 'linear',
-                min: -100,
-                max: 300,
-                position: 'left',
-                grid: {
-                    color: '#676767',
-                    drawTicks: false,
-                }
-            }
-        },
-        layout: {
-            padding: 0
-        }
-    },
-})
-
-// DOUGHTNUT
-const doughtnutCtx = document.getElementById('doughtnut');
-
-new Chart(doughtnutCtx, {
-    type: 'doughnut',
-    data: {
-        labels: ['PNL', 'Tether', 'Solana'],
-        datasets: [
-            {
-                label: 'Dataset 1',
-                data: [50, 25, 25],
-                backgroundColor: [
-                    '#FFF4B8',
-                    '#C1A875',
-                    '#676767'
-                ],
-                borderWidth: 0,
-            }
-        ]
-    },
-    options: {
-        responsive: true,
-        plugins: {
-            legend: {
-                display: false,
-            },
-            title: {
-                display: false,
-            }
-        },
-        cutout: 100,
-    },
 })
