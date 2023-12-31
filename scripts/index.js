@@ -36,6 +36,11 @@ const langSwitcher = document.querySelector('.lang-switcher')
 const langSwitcherArrow = document.querySelector('.lang-switcher__arrow')
 const langSwitcherSubItems = document.querySelectorAll('.lang-switcher__subitem')
 const langSwitcherItemSelected = document.querySelector('.lang-switcher__item--selected')
+const langSwitcherSubList = document.querySelector('.lang-switcher__sublist')
+const switcherImage = document.querySelector('.switcher__image')
+const switcherText = document.querySelector('.switcher__text')
+const switcherArrow = document.querySelector('.switcher__arrow')
+const switcherSublist = document.querySelector('.switcher__sublist')
 const currentSelectedLangValue = langSwitcherItemSelected.children[1].textContent
 
 const selectCurrentLang = () => {
@@ -72,6 +77,15 @@ langSwitcher.addEventListener('click', (event) => {
             langSwitcherSubItems.forEach(subItem => subItem.children[2].style.opacity = '0')
             subItem.children[2].style.opacity = '1'
         })
+    })
+
+    body.addEventListener('click', (event) => {
+        const { target } = event
+
+        if (!(target === switcherSublist) && !(target === langSwitcher) && !(target === switcherArrow) && !(target === switcherText) && !(target === switcherImage)) {
+            langSwitcherArrow.style.transform = 'rotate(90deg)'
+            langSwitcher.classList.remove('active')
+        }
     })
 })
 
@@ -201,36 +215,38 @@ const statisticTariffsSlider = new Swiper('.statistic-tariffs__slider', {
 // MOBILE MENU
 const burgerButton = document.querySelector('.header__burger')
 const mobileMenu = document.querySelector('.mobmenu')
+const mobileMenuWrapper = document.querySelector('.mobmenu__wrapper')
 const mobileMenuCloseBtn = document.querySelector('.mobmenu__close')
 const headerSection = document.querySelector('header')
 const mainSection = document.querySelector('main')
-const clientWindowHeight = window.screen.height
-const mobileMenuHeight = mobileMenu.clientHeight
-
-mobileMenu.style.top = `${clientWindowHeight}px`
 
 burgerButton.addEventListener('click', (event) => {
+    const documentHeight = window.innerHeight
+
     mobileMenu.style.display = 'flex'
-
-    const clientWindowHeight = window.screen.height
-    const mobileMenuHeight = mobileMenu.clientHeight
-
-    mobileMenu.style.top = `${clientWindowHeight - mobileMenuHeight}px`
-
+    mobileMenu.style.height = `${documentHeight}px`
+    setTimeout(() => {
+        mobileMenuWrapper.style.bottom = '0'
+    }, 100)
     body.style.overflow = 'hidden'
     headerSection.style.filter = 'blur(10px)'
     mainSection.style.filter = 'blur(10px)'
 
-    mobileMenuCloseBtn.addEventListener('click', () => {
-        mobileMenu.style.top = `${clientWindowHeight}px`
-        setTimeout(() => {
-            mobileMenu.style.display = 'none'
-        }, 400)
-        body.style.overflow = 'auto'
-        headerSection.style.filter = 'none'
-        mainSection.style.filter = 'none'
+
+
+    mobileMenu.addEventListener('click', (event) => {
+        const { target } = event
+
+        if (target === mobileMenuCloseBtn || target === mobileMenu) {
+            mobileMenuWrapper.style.bottom = '-100%'
+            setTimeout(() => {
+                mobileMenu.style.display = 'none'
+            }, 400)
+            body.style.overflow = 'auto'
+            headerSection.style.filter = 'none'
+            mainSection.style.filter = 'none'
+        }
     })
-    // }
 })
 
 // ACCOUNT PERIOD SWITCH
