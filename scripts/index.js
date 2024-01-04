@@ -249,30 +249,42 @@ burgerButton.addEventListener('click', (event) => {
     })
 })
 
-// ACCOUNT PERIOD SWITCH
-const periodDates = document.querySelectorAll('.accounts-period__date')
 
-periodDates.forEach((periodDate) => {
-    periodDate.addEventListener('click', (event) => {
-        periodDates.forEach((periodDate) => {
-            periodDate.classList.remove('active')
-        })
+// FILTER
+class Filter {
+    constructor(filterClass, filterItemClass, activeClass) {
+        this.filterClass = filterClass
+        this.filterItemClass = filterItemClass
+        this.activeClass = activeClass
+    }
 
-        periodDate.classList.add('active')
-    })
+    start() {
+        try {
+            this.filterClassHTML = document.querySelector(`.${this.filterClass}`)
+            this.filterItemClassHTML = document.querySelectorAll(`.${this.filterItemClass}`)
 
-})
+            this.filterClassHTML.addEventListener('click', (event) => {
+                const { target } = event
+                const isFilterItem = target.closest(`.${this.filterItemClass}`)
 
-// ACCOUNT FILTER SWITCH
-const filterItems = document.querySelectorAll('.accounts-filter__item')
+                if (isFilterItem) {
+                    this.filterItemClassHTML.forEach((filterItem) => {
+                        filterItem.classList.remove(this.activeClass)
+                    })
+                    isFilterItem.classList.add(this.activeClass)
+                }
+            })
+        } catch (error) {
 
-filterItems.forEach((filterItem) => {
-    filterItem.addEventListener('click', (event) => {
-        filterItems.forEach((filterItem) => {
-            filterItem.classList.remove('active')
-        })
+        }
 
-        filterItem.classList.add('active')
-    })
+    }
+}
 
-})
+// ACCOUNT HISTORY FILTER
+const accountFilter = new Filter('accounts-filter', 'accounts-filter__item', 'active')
+accountFilter.start()
+
+// ACCOUNT PERIOD FILTER
+const periodFilter = new Filter('accounts-period', 'accounts-period__date', 'active')
+periodFilter.start()
