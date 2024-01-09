@@ -1,9 +1,10 @@
 const body = document.querySelector('body')
+import { Switcher } from "./Switcher.js"
+import { Filter } from "./Filter.js"
+import { Progress } from "./Progress.js"
 
 // FAQ SPOLER
 const faqItems = document.querySelectorAll('.faq__item')
-const faqAnswer = document.querySelector('.faq__answer')
-const faqQuestion = document.querySelector('.faq__question')
 
 const questionPadding = 16
 
@@ -31,70 +32,41 @@ faqItems.forEach((faqItem) => {
     })
 })
 
-// LANG SWITCHER
-const langSwitcher = document.querySelector('.lang-switcher')
-const langSwitcherArrow = document.querySelector('.lang-switcher__arrow')
-const langSwitcherSubItems = document.querySelectorAll('.lang-switcher__subitem')
-const langSwitcherItemSelected = document.querySelector('.lang-switcher__item--selected')
-const langSwitcherSubList = document.querySelector('.lang-switcher__sublist')
-const switcherImage = document.querySelector('.switcher__image')
-const switcherText = document.querySelector('.switcher__text')
-const switcherArrow = document.querySelector('.switcher__arrow')
-const switcherSublist = document.querySelector('.switcher__sublist')
-const currentSelectedLangValue = langSwitcherItemSelected.children[1].textContent
+// PROGRESS
+const testProgressLine = new Progress('progress-block', {
+    progressPointsBlockClass: 'progress-points',
+    progressPointClass: 'progress-point',
+    progressLineText: '',
+    currentValue: 1728,
+    maxValue: 6000,
+    progressBlockWidth: 1240,
+    mainValues: [1000, 2000, 3000, 4000, 5000]
+}).start()
+const tariffsProgressLne = new Progress('statistic-tariffs__block', {
+    progressPointsBlockClass: 'progress-points',
+    progressPointClass: 'progress-point',
+    progressLineText: '',
+    currentValue: 1728,
+    maxValue: 6000,
+    progressBlockWidth: 1240,
+    mainValues: [1000, 2000, 3000, 4000, 5000]
+}).start()
 
-const selectCurrentLang = () => {
-    langSwitcherSubItems.forEach((subItem) => {
-        langValue = subItem.dataset.lang
-        if (langValue === currentSelectedLangValue) {
-            subItem.children[2].style.opacity = '1'
-        }
-    })
-}
-selectCurrentLang()
+// SWITCHERS
+const langSwitcher = new Switcher('lang-switcher').start()
+const accountSwitcher = new Switcher('accounts-switcher').start()
 
-langSwitcher.addEventListener('click', (event) => {
-    langSwitcher.classList.toggle('active')
+// FILTERS
+const accountFilter = new Filter('accounts-filter', 'accounts-filter__item').start()
+const periodFilter = new Filter('accounts-period', 'accounts-period__date').start()
 
-    const isOpened = langSwitcher.classList.contains('active')
-
-    if (isOpened) {
-        langSwitcherArrow.style.transform = 'rotate(270deg)'
-    } else {
-        langSwitcherArrow.style.transform = 'rotate(90deg)'
-    }
-
-    langSwitcherSubItems.forEach((subItem) => {
-        subItem.addEventListener('click', (event) => {
-            let currentSelectedImageSrc = langSwitcherItemSelected.children[0]
-            let currentSelectedText = langSwitcherItemSelected.children[1]
-            const newSelectedImageSrc = subItem.querySelector('img').src
-            const newSelectedText = subItem.dataset.lang
-
-            currentSelectedImageSrc.src = newSelectedImageSrc
-            currentSelectedText.textContent = newSelectedText
-
-            langSwitcherSubItems.forEach(subItem => subItem.children[2].style.opacity = '0')
-            subItem.children[2].style.opacity = '1'
-        })
-    })
-
-    body.addEventListener('click', (event) => {
-        const { target } = event
-
-        if (!(target === switcherSublist) && !(target === langSwitcher) && !(target === switcherArrow) && !(target === switcherText) && !(target === switcherImage)) {
-            langSwitcherArrow.style.transform = 'rotate(90deg)'
-            langSwitcher.classList.remove('active')
-        }
-    })
-})
 
 // FOOTER SUBMENU SPOILER
 const footerMenu = document.querySelectorAll('.footer__menu')
 
 footerMenu.forEach((footerMenu) => {
     footerMenu.addEventListener('click', (event) => {
-        footerSubMenu = footerMenu.children[1]
+        const footerSubMenu = footerMenu.children[1]
         const footerMenuArrow = footerMenu.children[0].children[0]
 
         footerSubMenu.classList.toggle('active')
@@ -232,8 +204,6 @@ burgerButton.addEventListener('click', (event) => {
     headerSection.style.filter = 'blur(10px)'
     mainSection.style.filter = 'blur(10px)'
 
-
-
     mobileMenu.addEventListener('click', (event) => {
         const { target } = event
 
@@ -248,43 +218,3 @@ burgerButton.addEventListener('click', (event) => {
         }
     })
 })
-
-
-// FILTER
-class Filter {
-    constructor(filterClass, filterItemClass, activeClass) {
-        this.filterClass = filterClass
-        this.filterItemClass = filterItemClass
-        this.activeClass = activeClass
-    }
-
-    start() {
-        try {
-            this.filterClassHTML = document.querySelector(`.${this.filterClass}`)
-            this.filterItemClassHTML = document.querySelectorAll(`.${this.filterItemClass}`)
-
-            this.filterClassHTML.addEventListener('click', (event) => {
-                const { target } = event
-                const isFilterItem = target.closest(`.${this.filterItemClass}`)
-
-                if (isFilterItem) {
-                    this.filterItemClassHTML.forEach((filterItem) => {
-                        filterItem.classList.remove(this.activeClass)
-                    })
-                    isFilterItem.classList.add(this.activeClass)
-                }
-            })
-        } catch (error) {
-
-        }
-
-    }
-}
-
-// ACCOUNT HISTORY FILTER
-const accountFilter = new Filter('accounts-filter', 'accounts-filter__item', 'active')
-accountFilter.start()
-
-// ACCOUNT PERIOD FILTER
-const periodFilter = new Filter('accounts-period', 'accounts-period__date', 'active')
-periodFilter.start()

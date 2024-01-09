@@ -41,17 +41,13 @@
           </label>
         </div>
         <div class="lang-switcher switcher">
-          <div class="lang-switcher__list switcher-list">
-            <div
-              class="lang-switcher__item lang-switcher__item--selected switcher__item switcher__item--selected"
-            >
-              <img
-                src="assets/images/langs/russian.svg"
-                alt="Russian"
-                class="lang-switcher__image switcher__image"
-              />
-              <p class="lang-switcher__text switcher__text">Ru</p>
-            </div>
+          <div class="lang-switcher__item switcher__item" data-value="Ru">
+            <img
+              src="assets/images/langs/russian.svg"
+              alt="Russian"
+              class="lang-switcher__image switcher__image"
+            />
+            <p class="lang-switcher__text switcher__text">Ru</p>
           </div>
           <img
             src="assets/images/icons/arrow.svg"
@@ -61,7 +57,7 @@
           <div class="lang-switcher__sublist switcher__sublist">
             <div
               class="lang-switcher__item lang-switcher__subitem switcher__item switcher__subitem"
-              data-lang="Ru"
+              data-value="Ru"
             >
               <img
                 src="assets/images/langs/russian.svg"
@@ -77,7 +73,7 @@
             </div>
             <div
               class="lang-switcher__item lang-switcher__subitem switcher__item switcher__subitem"
-              data-lang="En"
+              data-value="En"
             >
               <img
                 src="assets/images/langs/english.svg"
@@ -93,7 +89,7 @@
             </div>
             <div
               class="lang-switcher__item lang-switcher__subitem switcher__item switcher__subitem"
-              data-lang="Cn"
+              data-value="Cn"
             >
               <img
                 src="assets/images/langs/chinese.svg"
@@ -123,6 +119,7 @@
     <div class="header__menu">
       <nav class="navigation">
         <a href="./statistic.html" class="navigation__link">Статистика</a>
+        <a href="./tournaments.html" class="navigation__link">Турниры</a>
         <a href="#" class="navigation__link">Партнерам</a>
         <a href="#" class="navigation__link">Баланс</a>
         <a href="#" class="navigation__link">Выплаты</a>
@@ -479,6 +476,7 @@
       </p>
       <div class="footer__submenu">
         <a href="./statistic.html" class="footer__menu-link">Статистика</a>
+        <a href="./tournaments.html" class="footer__menu-link">Турниры</a>
         <a href="#" class="footer__menu-link">Партнерам</a>
         <a href="#" class="footer__menu-link">Баланс</a>
         <a href="#" class="footer__menu-link">Выплаты</a>
@@ -544,6 +542,16 @@
         </a>
       </div>
       <div class="mobmenu__item">
+        <a href="./tournaments.html" class="mobmenu__link">
+          <img
+            src="./assets/images/icons/tournament.svg"
+            alt="Statistic icon"
+            class="mobmenu__image"
+          />
+          Турниры
+        </a>
+      </div>
+      <div class="mobmenu__item">
         <a href="#" class="mobmenu__link">
           <img
             src="./assets/images/icons/balance.svg"
@@ -575,8 +583,9 @@
       </div>
     </div>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./scripts/charts.js"></script>
-  <script src="scripts/index.js"></script>
+  <script src="scripts/index.js" type="module"></script>
 </body>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>Vitruvian Trade - Турниры</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content wrapper">
+        <div class="logo">
+          <a href="./index.html" class="logo__link">
+            <img src="assets/images/logo.svg" alt="Logo" class="logo__image" />
+          </a>
+        </div>
+        <div class="header-options">
+          <!-- <div class="notification">
+            <span class="badge notification__badge">1</span>
+          </div> -->
+          <div class="authorization">
+            <a href="#" class="authorization__btn btn btn--primary"
+              >Регистрация</a
+            >
+            <a
+              href="./index-auth.html"
+              class="authorization__btn btn btn--secondary"
+              >Войти</a
+            >
+          </div>
+          <div class="theme-switcher">
+            <label class="theme-switcher__box">
+              <input type="checkbox" class="theme-switcher__input" checked />
+              <span class="theme-switcher__switch"></span>
+            </label>
+          </div>
+          <div class="lang-switcher switcher">
+            <div class="lang-switcher__item switcher__item" data-value="Ru">
+              <img
+                src="assets/images/langs/russian.svg"
+                alt="Russian"
+                class="lang-switcher__image switcher__image"
+              />
+              <p class="lang-switcher__text switcher__text">Ru</p>
+            </div>
+            <img
+              src="assets/images/icons/arrow.svg"
+              alt="Arrow Down"
+              class="lang-switcher__arrow switcher__arrow"
+            />
+            <div class="lang-switcher__sublist switcher__sublist">
+              <div
+                class="lang-switcher__item lang-switcher__subitem switcher__item switcher__subitem"
+                data-value="Ru"
+              >
+                <img
+                  src="assets/images/langs/russian.svg"
+                  alt="Russian"
+                  class="lang-switcher__image switcher__image"
+                />
+                <p class="lang-switcher__text switcher__text">Ru</p>
+                <img
+                  src="./assets/images/icons/checkmark.png"
+                  alt="Checkmark"
+                  class="lang-switcher__checkmark switcher__checkmark"
+                />
+              </div>
+              <div
+                class="lang-switcher__item lang-switcher__subitem switcher__item switcher__subitem"
+                data-value="En"
+              >
+                <img
+                  src="assets/images/langs/english.svg"
+                  alt="Russian"
+                  class="lang-switcher__image switcher__image"
+                />
+                <p class="lang-switcher__text switcher__text">En</p>
+                <img
+                  src="./assets/images/icons/checkmark.png"
+                  alt="Checkmark"
+                  class="lang-switcher__checkmark switcher__checkmark"
+                />
+              </div>
+              <div
+                class="lang-switcher__item lang-switcher__subitem switcher__item switcher__subitem"
+                data-value="Cn"
+              >
+                <img
+                  src="assets/images/langs/chinese.svg"
+                  alt="Russian"
+                  class="lang-switcher__image switcher__image"
+                />
+                <p class="lang-switcher__text switcher__text">Cn</p>
+                <img
+                  src="./assets/images/icons/checkmark.png"
+                  alt="Checkmark"
+                  class="lang-switcher__checkmark switcher__checkmark"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="support">
+            <a href="#" class="support__link">
+              <img
+                src="assets/images/icons/support.svg"
+                alt="Support"
+                class="support__icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header__menu">
+        <nav class="navigation">
+          <a href="./statistic.html" class="navigation__link">Статистика</a>
+          <a href="./tournaments.html" class="navigation__link">Турниры</a>
+          <a href="#" class="navigation__link">Партнерам</a>
+          <a href="#" class="navigation__link">Баланс</a>
+          <a href="#" class="navigation__link">Выплаты</a>
+        </nav>
+        <div class="header__burger">
+          <span class="header__burger-line header__burger-line--up"></span>
+          <span class="header__burger-line header__burger-line--middle"></span>
+          <span class="header__burger-line header__burger-line--down"></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- <main class="wrapper">
+      <div class="progress-block">
+        <div class="progress-wrapper">
+          <div class="progress-list">
+            <div class="progress-item box--bronze">
+              <p class="progress-item__name">Бронзовый</p>
+              <p class="progress-item__description">Комиссия: 5%</p>
+              <p class="progress-item__value">1000$</p>
+            </div>
+            <div class="progress-item box--silver">
+              <p class="progress-item__name">Серебрянный</p>
+              <p class="progress-item__description">Комиссия: 5%</p>
+              <p class="progress-item__value">2000$</p>
+            </div>
+            <div class="progress-item box--gold">
+              <p class="progress-item__name">Золотой</p>
+              <p class="progress-item__description">Комиссия: 5%</p>
+              <p class="progress-item__value">3000$</p>
+            </div>
+            <div class="progress-item box--platinum">
+              <p class="progress-item__name">Платиновый</p>
+              <p class="progress-item__description">Комиссия: 5%</p>
+              <p class="progress-item__value">4000$</p>
+            </div>
+            <div class="progress-item box--diamond">
+              <p class="progress-item__name">Бриллиантовый</p>
+              <p class="progress-item__description">Комиссия: 5%</p>
+              <p class="progress-item__value">5000$</p>
+            </div>
+          </div>
+          <div class="progress-line">
+            <div class="progress-line__active">
+              <span class="progress-line__title"></span>
+              <span class="progress-line__value"></span>
+            </div>
+            <div class="progress-points"></div>
+          </div>
+        </div>
+      </div>
+    </main> -->
+
+    <footer class="footer">
+      <div class="footer__copyright">
+        <a href="./index.html" class="logo__link">
+          <img src="assets/images/logo.svg" alt="Logo" class="logo__image" />
+        </a>
+        <p class="footer__copyright-text">
+          © 2021-2023 "Vitruvian Trade" - прибыльные инвестиции.
+        </p>
+        <p class="footer__copyright-text">Все права защищены.</p>
+      </div>
+      <div class="footer__menu">
+        <p class="footer__menu-title">
+          Навигация
+          <img
+            src="./assets/images/icons/arrow.svg"
+            alt="Arrow"
+            class="footer__menu-title-arrow"
+          />
+        </p>
+        <div class="footer__submenu">
+          <a href="./statistic.html" class="footer__menu-link">Статистика</a>
+          <a href="./tournaments.html" class="footer__menu-link">Турниры</a>
+          <a href="#" class="footer__menu-link">Партнерам</a>
+          <a href="#" class="footer__menu-link">Баланс</a>
+          <a href="#" class="footer__menu-link">Выплаты</a>
+        </div>
+      </div>
+      <div class="footer__menu">
+        <p class="footer__menu-title">
+          О системе
+          <img
+            src="./assets/images/icons/arrow.svg"
+            alt="Arrow"
+            class="footer__menu-title-arrow"
+          />
+        </p>
+        <div class="footer__submenu">
+          <a href="./statistic.html" class="footer__menu-link">О системе</a>
+          <a href="#" class="footer__menu-link">О системе</a>
+          <a href="#" class="footer__menu-link">О системе</a>
+          <a href="#" class="footer__menu-link">О системе</a>
+          <a href="#" class="footer__menu-link">О системе</a>
+          <a href="#" class="footer__menu-link">О системе</a>
+        </div>
+      </div>
+      <div class="footer__menu">
+        <p class="footer__menu-title">Следите за нами в соц.сетях</p>
+        <div class="footer__contacts">
+          <a href="#" class="footer__contacts-link">
+            <img
+              src="assets/images/icons/telegram.svg"
+              alt="Telegram"
+              class="footer__contacts-image"
+            />
+          </a>
+          <a href="#" class="footer__contacts-link">
+            <img
+              src="assets/images/icons/vk.svg"
+              alt="Telegram"
+              class="footer__contacts-image"
+            />
+          </a>
+          <a href="#" class="footer__contacts-link">
+            <img
+              src="assets/images/icons/whatsapp.svg"
+              alt="Telegram"
+              class="footer__contacts-image"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="mobmenu">
+      <div class="mobmenu__wrapper">
+        <span class="mobmenu__close"></span>
+        <div class="mobmenu__item">
+          <a href="./statistic.html" class="mobmenu__link">
+            <img
+              src="./assets/images/icons/stats.svg"
+              alt="Statistic icon"
+              class="mobmenu__image"
+            />
+            Статистика
+          </a>
+        </div>
+        <div class="mobmenu__item">
+          <a href="./tournaments.html" class="mobmenu__link">
+            <img
+              src="./assets/images/icons/tournament.svg"
+              alt="Statistic icon"
+              class="mobmenu__image"
+            />
+            Турниры
+          </a>
+        </div>
+        <div class="mobmenu__item">
+          <a href="#" class="mobmenu__link">
+            <img
+              src="./assets/images/icons/balance.svg"
+              alt="Statistic icon"
+              class="mobmenu__image"
+            />
+            Баланс
+          </a>
+        </div>
+        <div class="mobmenu__item">
+          <a href="#" class="mobmenu__link">
+            <img
+              src="./assets/images/icons/partners.svg"
+              alt="Statistic icon"
+              class="mobmenu__image"
+            />
+            Партнерам
+          </a>
+        </div>
+        <div class="mobmenu__item">
+          <a href="#" class="mobmenu__link">
+            <img
+              src="./assets/images/icons/money.svg"
+              alt="Statistic icon"
+              class="mobmenu__image"
+            />
+            Выплаты
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./scripts/index.js" type="module"></script>
+  </body>
+</html>
