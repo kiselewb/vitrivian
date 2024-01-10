@@ -32,7 +32,7 @@ export class Progress {
                 throw `Progress block '${this.progressBlockClass}' no found!`
             }
         } catch (error) {
-            console.warn(error)
+            // console.warn(error)
         }
     }
 

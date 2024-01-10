@@ -2,6 +2,7 @@ const body = document.querySelector('body')
 import { Switcher } from "./Switcher.js"
 import { Filter } from "./Filter.js"
 import { Progress } from "./Progress.js"
+import { Slippery } from "./Slippery.js"
 
 // FAQ SPOLER
 const faqItems = document.querySelectorAll('.faq__item')
@@ -33,7 +34,7 @@ faqItems.forEach((faqItem) => {
 })
 
 // PROGRESS
-const testProgressLine = new Progress('progress-block', {
+const tariffsProgress = new Progress('statistic-tariffs__block', {
     progressPointsBlockClass: 'progress-points',
     progressPointClass: 'progress-point',
     progressLineText: '',
@@ -42,14 +43,23 @@ const testProgressLine = new Progress('progress-block', {
     progressBlockWidth: 1240,
     mainValues: [1000, 2000, 3000, 4000, 5000]
 }).start()
-const tariffsProgressLne = new Progress('statistic-tariffs__block', {
+const tournamentsPrizeProgress = new Progress('tournaments-prizes__block', {
     progressPointsBlockClass: 'progress-points',
     progressPointClass: 'progress-point',
     progressLineText: '',
-    currentValue: 1728,
-    maxValue: 6000,
-    progressBlockWidth: 1240,
-    mainValues: [1000, 2000, 3000, 4000, 5000]
+    currentValue: 94,
+    maxValue: 100,
+    progressBlockWidth: 550,
+    mainValues: [20, 50, 80]
+}).start()
+const awardsProgress = new Progress('tournaments-awards__block', {
+    progressPointsBlockClass: 'progress-points',
+    progressPointClass: 'progress-point',
+    progressLineText: '',
+    currentValue: 28,
+    maxValue: 100,
+    progressBlockWidth: 550,
+    mainValues: [20, 50, 80]
 }).start()
 
 // SWITCHERS
@@ -59,7 +69,16 @@ const accountSwitcher = new Switcher('accounts-switcher').start()
 // FILTERS
 const accountFilter = new Filter('accounts-filter', 'accounts-filter__item').start()
 const periodFilter = new Filter('accounts-period', 'accounts-period__date').start()
+const tournamentsFilter = new Filter('tournaments-filter', 'tournaments-filter__item').start()
 
+// SLIPPERIES
+const tournamentsReferralsSlippery = new Slippery('tournaments-subreferrals__longlist', {
+    blockHeight: 360,
+}).start()
+const tournamentsSubofferSlippery = new Slippery('tournaments-suboffer', {
+    widthBlock: 520,
+    blockHeight: 300,
+}).start()
 
 // FOOTER SUBMENU SPOILER
 const footerMenu = document.querySelectorAll('.footer__menu')
